@@ -77,3 +77,7 @@ gem 'pundit'
 gem 'figaro', '1.0'
 
 gem 'bootstrap-sass', '~> 3.3.3'
+
+gem 'will_paginate', '~> 3.0.6'
+
+gem 'will_paginate-bootstrap'
