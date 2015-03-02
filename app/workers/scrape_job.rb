@@ -12,11 +12,8 @@ class HardWorker
   # perform scraping job through capybara/poltergeist
   def perform(shop_name)
 
-    #set shop variable as ENV["shop"] as input when calling rake scraper:scrape
-    shop = shop_name
-
     #visit the site
-    visit "http://salefinder.com.au/#{shop}-catalogue?qs=1,,0,0,0"
+    visit "http://salefinder.com.au/#{shop_name}-catalogue?qs=1,,0,0,0"
 
     #set the location to Melbourne, 3000
     page.find('a#header-change-region').trigger('click')
@@ -45,7 +42,7 @@ class HardWorker
         page_number = num
 
         #setting the location
-        visit "http://salefinder.com.au/#{shop}-catalogue?qs=#{num},,0,0,0"
+        visit "http://salefinder.com.au/#{shop_name}-catalogue?qs=#{num},,0,0,0"
         #set the location to Melbourne, 3000
         sleep 2
         page.find('a#header-change-region').trigger('click')
@@ -58,24 +55,49 @@ class HardWorker
         
         sleep 5
 
+        # Create new catalogue
+        all('div.retailer-catalogue').each do |item|
+          @catalogue = Catalogue.new
+          @catalogue.url = "http://salefinder.com.au" + item.find('a.catalogue-image')[:href]
+          @catalogue.title = item.find('div.catalogue-name').text
+          @catalogue.date = item.find('div.catalogue-date').text
+
+          #setting up the catalogue_num
+          catalogue = "http://salefinder.com.au" + @catalogue.url
+          start_count = "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue-vic/".length
+          end_count = catalogue.length - ("/catalogue".length) -1
+          @catalogue.catalogue_num = catalogue.slice(start_count..end_count)
+
+          @catalogue.shop = shop_name
+          #!!This is temporarily fixed to woolworth's logo!!
+          if @catalogue.shop == "Woolworths"
+            @catalogue.shop_logo = "http://salefinder.com.au/images/retailerlogos/126.jpg"
+          else
+            @catalogue.shop_logo = "http://salefinder.com.au/images/retailerlogos/148.jpg"
+          end
+          @catalogue.save
+        end
+
         #get the price information data on each item on a page
         all('div.item-landscape').each do |item|
 
-          #Create new post
-          @post = Post.new
-          @post.description = item.find('span.item-details h1 a').text
-          @post.price_info = item.first('span.price').text if item.first('span.price')
-          @post.unit_price = item.first('span.comparative-text').text if item.first('span.comparative-text')
-          price_description = item.find('div.price-options').text if item.find('div.price-options')
-          price_description.slice!(@post.price_info) if @post.price_info
-          price_description.slice!(@post.unit_price) if @post.unit_price
-          @post.saving_info if item.find('div.price-options')
-          @post.image = item.all('a img')[0][:src]
-          @post.shop_logo = item.all('a img')[1][:src]
-          @post.shop = shop
+          item_catalogue = item.all('a img')[0][:src]
+          start1 = "http://salefinder.com.au/images/thumb/".length
+          end1 = item_catalogue.length - ("331.jpg".length) -1
+          p item_catalogue_num = item_catalogue.slice(start1..end1)
+          p Catalogue.all
 
-          #save post
-          @post.save
+          #Create new post
+          description = item.find('span.item-details h1 a').text
+          price_info = item.first('span.price').text if item.first('span.price')
+          unit_price = item.first('span.comparative-text').text if item.first('span.comparative-text')
+          saving_info = item.find('div.price-options').text if item.find('div.price-options')
+          saving_info.slice!(price_info) if price_info
+          saving_info.slice!(unit_price) if unit_price
+          saving_info if item.find('div.price-options')
+          image = item.all('a img')[0][:src]
+          Catalogue.find_by(catalogue_num: item_catalogue_num ).posts.create(description: description, price_info: price_info, unit_price: unit_price, saving_info: saving_info, image: image)
+      
         end
         sleep 5 
         p "-------------------- next page --------------"
