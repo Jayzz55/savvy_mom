@@ -98,4 +98,12 @@ namespace :scraper do
     Post.destroy_all
   end
 
+  desc "test running jobs"
+  task run_job: :environment do
+    require_relative '../../app/workers/scrape_job.rb'
+
+    HardWorker.perform_async("Woolworths")
+
+  end
+
 end
