@@ -5,6 +5,7 @@ class CreateCatalogues < ActiveRecord::Migration
       t.string :date
       t.string :shop
       t.text :shop_logo
+      t.text :url
 
       t.timestamps
     end
