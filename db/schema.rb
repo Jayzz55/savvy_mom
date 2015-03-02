@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20150302070631) do
     t.string   "shop"
     t.text     "shop_logo"
     t.text     "url"
+    t.text     "area"
+    t.text     "catalogue_num"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
