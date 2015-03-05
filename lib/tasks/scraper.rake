@@ -1,17 +1,17 @@
 namespace :scraper do
 
   desc "Destroy all posting data"
-  task destroy_all_posts: :environment do
-    require_relative '../../app/workers/scrape_job.rb'
+  task destroy_data: :environment do
+    require_relative '../../app/jobs/clean_job.rb'
 
-    CleanupWorker.perform_async
+    CleanupWorker.perform_later
   end
 
   desc "test running jobs"
   task run_job: :environment do
-    require_relative '../../app/workers/scrape_job.rb'
+    require_relative '../../app/jobs/catalogue_check_job.rb'
 
-    HardWorker.perform_async("Woolworths")
+    CatalogueCheckWorker.perform_later
 
   end
 
