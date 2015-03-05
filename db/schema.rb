@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20150302070631) do
     t.string   "date"
     t.string   "shop"
     t.text     "shop_logo"
-    t.text     "url"
     t.text     "area"
     t.text     "catalogue_num"
     t.datetime "created_at"
@@ -28,8 +27,8 @@ ActiveRecord::Schema.define(version: 20150302070631) do
   create_table "posts", force: :cascade do |t|
     t.text     "image"
     t.string   "description"
-    t.decimal  "price"
-    t.decimal  "saving"
+    t.string   "saving"
+    t.string   "saving_percentage"
     t.string   "price_info"
     t.string   "unit_price"
     t.string   "saving_info"
