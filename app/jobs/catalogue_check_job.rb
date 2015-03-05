@@ -19,7 +19,7 @@ class CatalogueCheckWorker < ActiveJob::Base
     compare_catalogue_array = []
     new_catalogue = []
     catalogue_delete = []
-    region_array = ["Melbourne, 3000", "Sydney, 2000"]
+    region_array = ["Melbourne, 3000"]#, "Sydney, 2000"]
 
     #collect current_catalogue data
     Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}

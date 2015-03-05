@@ -3,8 +3,8 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.text :image
       t.string :description
-      t.decimal :price
-      t.decimal :saving
+      t.string :saving
+      t.string :saving_percentage
       t.string :price_info
       t.string :unit_price
       t.string :saving_info
