@@ -1,7 +1,5 @@
-class CleanupWorker < ActiveJob::Base
+class DeleteAllJob < ActiveJob::Base
   queue_as :default
-
-  include Sidekiq::Worker
 
   def perform
     Catalogue.destroy_all
