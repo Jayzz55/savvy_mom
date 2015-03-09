@@ -7,12 +7,6 @@ class CheckCataloguesJob < ActiveJob::Base
   require_relative '../../app/jobs/delete_catalogues_job.rb'
   require_relative '../../app/jobs/capybara_quit_job.rb'
 
-  include Capybara::DSL
-  Capybara.register_driver :poltergeist do |app|
-    Capybara::Poltergeist::Driver.new(app, timeout: 60, js_errors: false)
-  end
-  Capybara.default_driver = :poltergeist
-
   def perform
 
     #new_catalogues stores result from calling catalogue_gather method
@@ -22,9 +16,9 @@ class CheckCataloguesJob < ActiveJob::Base
     current_catalogue = Hash.new(0)
     Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}
 
-    #scrape new posts from new catalogue
+    #scrape new posts from new catalogues
     catalogue_to_add = add_new_catalogue(current_catalogue, new_catalogues)
-    ScrapeCataloguesJob.perform_later(catalogue_to_add)
+    ScrapeCataloguesJob.perform_later(catalogue_to_add) if catalogue_to_add.length > 0
 
     #delete old and duplicate catalogues
     delete_old_duplicate_catalogue(current_catalogue, new_catalogues, catalogue_to_add)  
@@ -39,7 +33,6 @@ class CheckCataloguesJob < ActiveJob::Base
     regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
     catalogue_result = []
     session_wait = 7
-    Capybara.default_wait_time = 5
     regions.each do |region|
       ['Woolworths', 'Coles'].each do |shop|
 
@@ -47,21 +40,34 @@ class CheckCataloguesJob < ActiveJob::Base
         visit "http://salefinder.com.au/#{shop}-catalogue?qs=1,,0,0,0"
 
         #set the region of the catalogue we want to gather
-        page.find('a#header-change-region').trigger('click')
-        page.find('input#location-search').set(region)
-        page.find('div.autocomplete-suggestion strong').click
+        set_catalogue_region(region)
 
         #scrape the catalogue number information
-        page.all('a.catalogue-image img').each do |catalogue|
-          item_url = catalogue[:src]
-          start_count = "http://salefinder.com.au/images/featureimage/iphone/".length
-          end_count = item_url.length - (".jpg".length) - 1
-          catalogue_result <<  catalogue_num = item_url.slice!(start_count..end_count)
-        end
+        catalogue_result += scrape_catalogue_number()
+        
         sleep session_wait
       end
     end
     return catalogue_result
+  end
+
+  def scrape_catalogue_number()
+    catalogue_number = []
+    page.all('a.catalogue-image img').each do |catalogue|
+      item_url = catalogue[:src]
+      start_count = "http://salefinder.com.au/images/featureimage/iphone/".length
+      end_count = item_url.length - (".jpg".length) - 1
+      catalogue_number << item_url.slice!(start_count..end_count)
+    end
+    return catalogue_number
+  end
+
+  def set_catalogue_region(region)
+    session_wait = 2
+    page.find('a#header-change-region').trigger('click')
+    page.find('input#location-search').set(region)
+    sleep session_wait
+    page.find('div.autocomplete-suggestion strong').click
   end
 
   def add_new_catalogue(current_catalogue, new_catalogues)
@@ -84,6 +90,6 @@ class CheckCataloguesJob < ActiveJob::Base
 
     #delete old and duplicate catalogues
     catalogue_to_delete = old_data + duplicate_data
-    DeleteCataloguesJob.perform_later(catalogue_to_delete)
+    DeleteCataloguesJob.perform_later(catalogue_to_delete) if catalogue_to_delete.length > 0
   end
 end

@@ -4,12 +4,6 @@ class ScrapeCataloguesJob < ActiveJob::Base
   require 'capybara'
   require 'capybara/poltergeist'
 
-  include Capybara::DSL
-  Capybara.register_driver :poltergeist do |app|
-    Capybara::Poltergeist::Driver.new(app, timeout: 60, js_errors: false)
-  end
-  Capybara.default_driver = :poltergeist
-
   def perform(catalogue_to_add)
     num_retry = 0
     session_wait = 7
@@ -18,43 +12,18 @@ class ScrapeCataloguesJob < ActiveJob::Base
       begin
 
         #visit page
-        visit catalogue_url(catalogue_num)
+        visit catalogue_url(catalogue_num, nil)
         
         #creating new catalogue
-        title = page.all('div#breadcrumb li a')[2].text
-        date = page.find('span.sale-dates').text
-        catalogue_num = catalogue_num
-        shop = page.all('div#breadcrumb li a')[1].text
-        shop.slice!(" catalogues")
-        if shop == "Woolworths"
-          shop_logo = "http://salefinder.com.au/images/retailerlogos/126.jpg"
-          area = title["Weekly Specials Catalogue ".length .. title.length] + " METRO"
-        else
-          shop_logo = "http://salefinder.com.au/images/retailerlogos/148.jpg"
-          area = title["Coles Catalogue ".length .. title.length]
-        end
-
-        Catalogue.create(title: title, date: date, catalogue_num: catalogue_num, shop: shop, shop_logo: shop_logo, area: area)
+        create_new_catalogue(catalogue_num)
 
         #start scraping from page 1 and loop to last page
         page_num = 1
         visit catalogue_url(catalogue_num, page_num)
         while page.has_css?('span.price')
-          #get the price information data on each item on a page
-          all('div.item-landscape').each do |item|
-            description = item.find('span.item-details h1 a').text
-            price_info = item.first('span.price').text if item.first('span.price')
-            unit_price = item.first('span.comparative-text').text if item.first('span.comparative-text')
-            saving_info = item.find('div.price-options').text if item.find('div.price-options')
-            saving_info.slice!(price_info) if price_info
-            saving_info.slice!(unit_price) if unit_price
-            image = item.all('a img')[0][:src]
-            #call the private saving method and save the result array into 'savings'
-            savings = saving(price_info, saving_info)
+          #create new posts from scraping each items
+          create_new_posts(catalogue_num)
 
-            #create the post under the catalogue it's associated with
-            Catalogue.find_by(catalogue_num: catalogue_num ).posts.create(description: description, price_info: price_info, unit_price: unit_price, saving_info: saving_info, image: image, saving: savings[0], saving_percentage: savings[1])
-          end
           page_num += 1
 
           #Capybara reset session
@@ -73,6 +42,40 @@ class ScrapeCataloguesJob < ActiveJob::Base
   end
 
   private
+
+  def create_new_posts(catalogue_num)
+    all('div.item-landscape').each do |item|
+      description = item.find('span.item-details h1 a').text
+      price_info = item.first('span.price').text if item.first('span.price')
+      unit_price = item.first('span.comparative-text').text if item.first('span.comparative-text')
+      saving_info = item.find('div.price-options').text if item.find('div.price-options')
+      saving_info.slice!(price_info) if price_info
+      saving_info.slice!(unit_price) if unit_price
+      image = item.all('a img')[0][:src]
+      #call the private saving method and save the result array into 'savings'
+      savings = saving(price_info, saving_info)
+
+      #create the post under the catalogue it's associated with
+      Catalogue.find_by(catalogue_num: catalogue_num ).posts.create(description: description, price_info: price_info, unit_price: unit_price, saving_info: saving_info, image: image, saving: savings[0], saving_percentage: savings[1])
+    end
+  end
+
+  def create_new_catalogue(catalogue_num)
+    title = page.all('div#breadcrumb li a')[2].text
+    date = page.find('span.sale-dates').text
+    catalogue_num = catalogue_num
+    shop = page.all('div#breadcrumb li a')[1].text
+    shop.slice!(" catalogues")
+    if shop == "Woolworths"
+      shop_logo = "http://salefinder.com.au/images/retailerlogos/126.jpg"
+      area = title["Weekly Specials Catalogue ".length .. title.length] + " METRO"
+    else
+      shop_logo = "http://salefinder.com.au/images/retailerlogos/148.jpg"
+      area = title["Coles Catalogue ".length .. title.length]
+    end
+
+    Catalogue.create(title: title, date: date, catalogue_num: catalogue_num, shop: shop, shop_logo: shop_logo, area: area)
+  end
 
   def catalogue_url(catalogue_num, page_num)
     if page_num == nil
