@@ -19,13 +19,13 @@ class CatalogueCheckWorker < ActiveJob::Base
     compare_catalogue_array = []
     new_catalogue = []
     catalogue_delete = []
-    region_array = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
+    regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
 
     #collect current_catalogue data
     Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}
 
     #collect compare_catalogue_array data
-    compare_catalogue_array = catalogue_gather(region_array)
+    compare_catalogue_array = catalogue_gather(regions)
 
     #scrape new posts from new catalogue
     compare_catalogue_array.each do |i| 
@@ -49,9 +49,9 @@ class CatalogueCheckWorker < ActiveJob::Base
 
   private
 
-  def catalogue_gather(region_array)
+  def catalogue_gather(regions)
     array_result = []
-    region_array.each do |region|
+    regions.each do |region|
       ['Woolworths', 'Coles'].each do |shop|
 
         #visit the site
