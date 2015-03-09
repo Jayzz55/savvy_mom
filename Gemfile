@@ -16,7 +16,6 @@ group :development do
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'pry-rails'
   gem 'faker'
 end
@@ -27,7 +26,6 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-debugger', '~> 0.2.3'
   gem "shoulda-matchers"
-  gem 'poltergeist'
 end
 
 # Use SCSS for stylesheets
@@ -83,3 +81,8 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 
 gem 'sidekiq', '3.2.5'
+
+gem 'capybara'
+
+gem 'poltergeist'
+
