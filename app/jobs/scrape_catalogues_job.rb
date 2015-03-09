@@ -1,42 +1,44 @@
-class PostScrapeWorker < ActiveJob::Base
+class ScrapeCataloguesJob < ActiveJob::Base
   queue_as :default
 
   require 'capybara'
   require 'capybara/poltergeist'
-  
+
   include Capybara::DSL
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(app, timeout: 60, js_errors: false)
   end
   Capybara.default_driver = :poltergeist
 
-  def perform(new_catalogue)
-    new_catalogue.each do |catalogue_num|
+  def perform(catalogue_to_add)
+    num_retry = 0
+    session_wait = 7
+
+    catalogue_to_add.each do |catalogue_num|
       begin
 
         #visit page
-        visit "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/catalogue"
+        visit catalogue_url(catalogue_num)
         
         #creating new catalogue
-        @catalogue = Catalogue.new
-        @catalogue.title = page.all('div#breadcrumb li a')[2].text
-        @catalogue.date = page.find('span.sale-dates').text
-        @catalogue.catalogue_num = catalogue_num
-        @catalogue.shop = page.all('div#breadcrumb li a')[1].text
-        @catalogue.shop.slice!(" catalogues")
-        if @catalogue.shop == "Woolworths"
-          @catalogue.shop_logo = "http://salefinder.com.au/images/retailerlogos/126.jpg"
-          @catalogue.area = @catalogue.title["Weekly Specials Catalogue ".length .. @catalogue.title.length] + " METRO"
+        title = page.all('div#breadcrumb li a')[2].text
+        date = page.find('span.sale-dates').text
+        catalogue_num = catalogue_num
+        shop = page.all('div#breadcrumb li a')[1].text
+        shop.slice!(" catalogues")
+        if shop == "Woolworths"
+          shop_logo = "http://salefinder.com.au/images/retailerlogos/126.jpg"
+          area = title["Weekly Specials Catalogue ".length .. title.length] + " METRO"
         else
-          @catalogue.shop_logo = "http://salefinder.com.au/images/retailerlogos/148.jpg"
-          @catalogue.area = @catalogue.title["Coles Catalogue ".length .. @catalogue.title.length]
+          shop_logo = "http://salefinder.com.au/images/retailerlogos/148.jpg"
+          area = title["Coles Catalogue ".length .. title.length]
         end
 
-        @catalogue.save
+        Catalogue.create(title: title, date: date, catalogue_num: catalogue_num, shop: shop, shop_logo: shop_logo, area: area)
 
         #start scraping from page 1 and loop to last page
         page_num = 1
-        visit "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/list?qs=#{page_num}"
+        visit catalogue_url(catalogue_num, page_num)
         while page.has_css?('span.price')
           #get the price information data on each item on a page
           all('div.item-landscape').each do |item|
@@ -60,16 +62,25 @@ class PostScrapeWorker < ActiveJob::Base
           page.driver.reset!
 
           #visit the next page
-          sleep 5
-          visit "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/list?qs=#{page_num}"
+          sleep session_wait
+          visit catalogue_url(catalogue_num, page_num)
         end
       rescue Capybara::Poltergeist::TimeoutError 
-        retry
+        num_retry += 1
+        retry if num_retry <= 4
       end
     end
   end
 
   private
+
+  def catalogue_url(catalogue_num, page_num)
+    if page_num == nil
+      return "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/catalogue"
+    else
+      return "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/list?qs=#{page_num}"
+    end
+  end
 
   #setting a method that return an array consist of savings information, and savings percentage.
   def saving(price_info, saving_info)

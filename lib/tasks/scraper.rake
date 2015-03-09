@@ -1,17 +1,17 @@
 namespace :scraper do
 
   desc "Destroy all posting data"
-  task destroy_data: :environment do
-    require_relative '../../app/jobs/clean_job.rb'
+  task delete_all: :environment do
+    require_relative '../../app/jobs/delete_all_job.rb'
 
-    CleanupWorker.perform_later
+    DeleteAllJob.perform_later
   end
 
   desc "test running jobs"
-  task run_job: :environment do
-    require_relative '../../app/jobs/catalogue_check_job.rb'
+  task check_catalogues: :environment do
+    require_relative '../../app/jobs/check_catalogues_job.rb'
 
-    CatalogueCheckWorker.perform_later
+    CheckCataloguesJob.perform_later
 
   end
 

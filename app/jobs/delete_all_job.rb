@@ -1,4 +1,4 @@
-class CleanupWorker < ActiveJob::Base
+class DeleteAllJob < ActiveJob::Base
   queue_as :default
 
   def perform
