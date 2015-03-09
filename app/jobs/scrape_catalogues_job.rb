@@ -18,7 +18,7 @@ class ScrapeCataloguesJob < ActiveJob::Base
       begin
 
         #visit page
-        visit catalogue_url(catalogue_num)
+        visit catalogue_url(catalogue_num, nil)
         
         #creating new catalogue
         title = page.all('div#breadcrumb li a')[2].text
