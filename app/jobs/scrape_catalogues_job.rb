@@ -1,18 +1,20 @@
-class ScrapeCataloguesJob < ActiveJob::Base
-  queue_as :default
+require 'capybara'
+require 'capybara/poltergeist'
 
-  require 'capybara'
-  require 'capybara/poltergeist'
+class ScrapeCataloguesJob < ActiveJob::Base
+  include Capybara::DSL
+  queue_as :default
 
   def perform(catalogue_to_add)
     num_retry = 0
+    max_retry = 4
     session_wait = 7
 
     catalogue_to_add.each do |catalogue_num|
       begin
 
         #visit page
-        visit catalogue_url(catalogue_num, nil)
+        visit catalogue_url(catalogue_num)
         
         #creating new catalogue
         create_new_catalogue(catalogue_num)
@@ -36,7 +38,7 @@ class ScrapeCataloguesJob < ActiveJob::Base
         end
       rescue Capybara::Poltergeist::TimeoutError 
         num_retry += 1
-        retry if num_retry <= 4
+        retry if num_retry <= max_retry
       end
     end
   end
@@ -63,7 +65,6 @@ class ScrapeCataloguesJob < ActiveJob::Base
   def create_new_catalogue(catalogue_num)
     title = page.all('div#breadcrumb li a')[2].text
     date = page.find('span.sale-dates').text
-    catalogue_num = catalogue_num
     shop = page.all('div#breadcrumb li a')[1].text
     shop.slice!(" catalogues")
     if shop == "Woolworths"
@@ -77,8 +78,8 @@ class ScrapeCataloguesJob < ActiveJob::Base
     Catalogue.create(title: title, date: date, catalogue_num: catalogue_num, shop: shop, shop_logo: shop_logo, area: area)
   end
 
-  def catalogue_url(catalogue_num, page_num)
-    if page_num == nil
+  def catalogue_url(catalogue_num, page_num=nil)
+    if page_num.nil?
       return "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/catalogue"
     else
       return "http://salefinder.com.au/woolworths-catalogue/weekly-specials-catalogue/#{catalogue_num}/list?qs=#{page_num}"
