@@ -1,37 +1,34 @@
-class CheckCataloguesJob < ActiveJob::Base
-  queue_as :default
+require 'capybara'
+require 'capybara/poltergeist'
+require_relative '../../app/jobs/scrape_catalogues_job.rb'
+require_relative '../../app/jobs/delete_catalogues_job.rb'
+require_relative '../../app/jobs/capybara_quit_job.rb'
 
-  require 'capybara'
-  require 'capybara/poltergeist'
-  require_relative '../../app/jobs/scrape_catalogues_job.rb'
-  require_relative '../../app/jobs/delete_catalogues_job.rb'
-  require_relative '../../app/jobs/capybara_quit_job.rb'
+class CheckCataloguesJob < ActiveJob::Base
+  include Capybara::DSL
+  queue_as :default
 
   def perform
 
-    #new_catalogues stores result from calling catalogue_gather method
-    new_catalogues = catalogue_gather
+    published_catalogue_nums = scrape_published_catalogue_nums
 
-    #collect current_catalogue data
-    current_catalogue = Hash.new(0)
+    current_catalogue = {}
     Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}
 
-    #scrape new posts from new catalogues
-    catalogue_to_add = add_new_catalogue(current_catalogue, new_catalogues)
-    ScrapeCataloguesJob.perform_later(catalogue_to_add) if catalogue_to_add.length > 0
+    known_catalogue_nums = Catalogue.pluck(:catalogue_num) 
+    catalogue_to_add = published_catalogue_nums - known_catalogue_nums
+    ScrapeCataloguesJob.perform_later(catalogue_to_add) if catalogue_to_add.any?
 
-    #delete old and duplicate catalogues
-    delete_old_duplicate_catalogue(current_catalogue, new_catalogues, catalogue_to_add)  
+    delete_old_duplicate_catalogue(current_catalogue, published_catalogue_nums, catalogue_to_add)  
 
-    #Capybara quit session
     CapybaraQuitJob.perform_later
   end
 
   private
 
-  def catalogue_gather
+  def scrape_published_catalogue_nums
     regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
-    catalogue_result = []
+    published_catalogue_nums = []
     session_wait = 7
     regions.each do |region|
       ['Woolworths', 'Coles'].each do |shop|
@@ -43,15 +40,15 @@ class CheckCataloguesJob < ActiveJob::Base
         set_catalogue_region(region)
 
         #scrape the catalogue number information
-        catalogue_result += scrape_catalogue_number()
+        published_catalogue_nums += scrape_catalogue_number
         
         sleep session_wait
       end
     end
-    return catalogue_result
+    return published_catalogue_nums
   end
 
-  def scrape_catalogue_number()
+  def scrape_catalogue_number
     catalogue_number = []
     page.all('a.catalogue-image img').each do |catalogue|
       item_url = catalogue[:src]
@@ -70,19 +67,11 @@ class CheckCataloguesJob < ActiveJob::Base
     page.find('div.autocomplete-suggestion strong').click
   end
 
-  def add_new_catalogue(current_catalogue, new_catalogues)
-    catalogue_addition = []
-    new_catalogues.each do |i| 
-      catalogue_addition << i unless current_catalogue.has_value?(i)
-    end
-    return catalogue_addition
-  end
-
-  def delete_old_duplicate_catalogue(current_catalogue, new_catalogues, catalogue_to_add)
+  def delete_old_duplicate_catalogue(current_catalogue, published_catalogue_nums, catalogue_to_add)
     catalogue_to_delete = []
 
     #gather old catalogues and posts
-    old_data = current_catalogue.values + catalogue_to_add - new_catalogues
+    old_data = current_catalogue.values + catalogue_to_add - published_catalogue_nums
 
     #gather duplicate catalogues and posts
     duplicate_hash = current_catalogue.values.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
@@ -90,6 +79,6 @@ class CheckCataloguesJob < ActiveJob::Base
 
     #delete old and duplicate catalogues
     catalogue_to_delete = old_data + duplicate_data
-    DeleteCataloguesJob.perform_later(catalogue_to_delete) if catalogue_to_delete.length > 0
+    DeleteCataloguesJob.perform_later(catalogue_to_delete) if catalogue_to_delete.any?
   end
 end
