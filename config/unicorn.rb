@@ -1,4 +1,4 @@
-include Sidekiq::Worker
+require 'sidekiq'
 
 worker_processes 3
 after_fork do |server, worker|
