@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8315%2Ffood-and-beverage%2Fgroceries%2Fcanned-and-packet-food%2Fjohn-west-tuna-tempters-multi-pack-4x95g%2F8315102%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FColes-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6&callback=PIN_1426080530119.f.callback[1]
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:26:38 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 11 Mar 2015 13:41:38 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '637877291524'
+  Age: '0'
+  X-Served-By: cache-lax1421-LAX
+  X-Cache: MISS
+  X-Cache-Hits: '0'
+  X-Timer: S1426080398.746055365,VS0,VE68
+  Connection: close
+:content: PIN_1426080530119.f.callback[1]({"url":"http://salefinder.com.au/8315/food-and-beverage/groceries/canned-and-packet-food/john-west-tuna-tempters-multi-pack-4x95g/8315102/","count":0})

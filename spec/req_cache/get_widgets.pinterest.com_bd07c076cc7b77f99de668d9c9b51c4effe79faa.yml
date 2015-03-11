@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8325%2Ffood-and-beverage%2Fgroceries%2Fhome-and-outdoor%2Fdomino-stars-raceway-accessories--marble-maze-staircase-or-bridge%2F8325112%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6&callback=PIN_1426082410034.f.callback[11]
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:57:59 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 11 Mar 2015 14:12:59 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '496084788560'
+  Age: '0'
+  X-Served-By: cache-sjc3130-SJC
+  X-Cache: MISS
+  X-Cache-Hits: '0'
+  X-Timer: S1426082279.640231371,VS0,VE80
+  Connection: close
+:content: PIN_1426082410034.f.callback[11]({"url":"http://salefinder.com.au/8325/food-and-beverage/groceries/home-and-outdoor/domino-stars-raceway-accessories--marble-maze-staircase-or-bridge/8325112/","count":0})

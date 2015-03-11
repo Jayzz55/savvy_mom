@@ -86,3 +86,5 @@ gem 'capybara'
 
 gem 'poltergeist'
 
+gem 'puffing-billy'
+

@@ -24,10 +24,9 @@ class CheckCataloguesJob < ActiveJob::Base
     CapybaraQuitJob.perform_later
   end
 
-  private
-
   def scrape_published_catalogue_nums
-    regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
+    # regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
+    regions = ["Melbourne, 3000"]
     published_catalogue_nums = []
     session_wait = 7
     regions.each do |region|

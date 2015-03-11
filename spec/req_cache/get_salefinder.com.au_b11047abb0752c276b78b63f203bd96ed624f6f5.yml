@@ -1,0 +1,52 @@
+---
+:scope: 
+:url: http://salefinder.com.au/css/images/find_it_btn.png
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:26:21 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  Last-Modified: Wed, 21 Nov 2012 11:30:41 GMT
+  ETag: '"380f8a-64d-4ceffae2cda40"'
+  Accept-Ranges: bytes
+  Content-Length: '1613'
+  Connection: close
+  Content-Type: image/png
+:content: !binary |-
+  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

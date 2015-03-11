@@ -1,0 +1,15 @@
+---
+:scope: 
+:url: http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsalefinder.com.au%2F8325%2Ffood-and-beverage%2Fgroceries%2Fbakery%2Flunch-roll-varieties-pk-6%2F8325105%2F&send=false&layout=button_count&width=90&show_faces=false&action=like&colorscheme=light&font&height=21&appId=252008274815721
+:body: ''
+:status: 302
+:method: get
+:headers:
+  Location: https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsalefinder.com.au%2F8325%2Ffood-and-beverage%2Fgroceries%2Fbakery%2Flunch-roll-varieties-pk-6%2F8325105%2F&send=false&layout=button_count&width=90&show_faces=false&action=like&colorscheme=light&font&height=21&appId=252008274815721
+  X-Content-Type-Options: nosniff
+  Content-Type: text/html; charset=utf-8
+  X-FB-Debug: a+6R8yOJZvXklUwHF/m+6ziqNN84zwY2GYTDaFChYfjL0NWba6rRaWMNBqiJjdroR/hBdrI4lth1/RpRxTTNOQ==
+  Date: Wed, 11 Mar 2015 13:26:20 GMT
+  Connection: close
+  Content-Length: '0'
+:content: ''

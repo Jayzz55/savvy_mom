@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8315%2Ffood-and-beverage%2Fgroceries%2Fbiscuits-and-snacks%2Flindt-block-chocolate-100g-nestl-block-chocolate-118g200g-mars-medium-bitesize-155g200g-or-skittles-bag-190g200g%2F8315110%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FColes-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6&callback=PIN_1426080612571.f.callback[9]
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:28:01 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 11 Mar 2015 13:41:39 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '917326142168'
+  Age: '82'
+  X-Served-By: cache-lax1424-LAX
+  X-Cache: HIT
+  X-Cache-Hits: '1'
+  X-Timer: S1426080481.682504177,VS0,VE0
+  Connection: close
+:content: PIN_1426080612571.f.callback[9]({"url":"http://salefinder.com.au/8315/food-and-beverage/groceries/biscuits-and-snacks/lindt-block-chocolate-100g-nestl-block-chocolate-118g200g-mars-medium-bitesize-155g200g-or-skittles-bag-190g200g/8315110/","count":0})

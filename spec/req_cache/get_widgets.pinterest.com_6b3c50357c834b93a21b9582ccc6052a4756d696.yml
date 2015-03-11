@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8325%2Ffood-and-beverage%2Fgroceries%2Fbiscuits-and-snacks%2Fsmiths-thinly-cut-chips-175g%2F8325103%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6&callback=PIN_1426080519006.f.callback[2]
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:26:27 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 11 Mar 2015 13:41:21 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '314142745992'
+  Age: '6'
+  X-Served-By: cache-lax1430-LAX
+  X-Cache: HIT
+  X-Cache-Hits: '1'
+  X-Timer: S1426080387.367990017,VS0,VE0
+  Connection: close
+:content: PIN_1426080519006.f.callback[2]({"url":"http://salefinder.com.au/8325/food-and-beverage/groceries/biscuits-and-snacks/smiths-thinly-cut-chips-175g/8325103/","count":0})

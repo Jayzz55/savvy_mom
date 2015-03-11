@@ -1,0 +1,17 @@
+---
+:scope: 
+:url: http://salefinder.com.au/ajax/locationsearch?callback=jQuery182042130394163541496_1426082426236&query=Melbourne%2C+3000&_=1426082429881
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 11 Mar 2015 13:58:17 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  X-Powered-By: PHP/5.3.3
+  Set-Cookie: ci_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%2206bfb9f73e027eb9665485f96820daef%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%22202.59.11.18%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X%29+AppleWebKi%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1426082297%3B%7D6f1c1fca623b512a70571087461afdf1;
+    expires=Wed, 11-Mar-2015 15:58:17 GMT; path=/; domain=.salefinder.com.au
+  Content-Length: '158'
+  Connection: close
+  Content-Type: application/json
+:content: jQuery182042130394163541496_1426082426236({"Id":"5188","postcode":"3000","displayName":"MELBOURNE","suggestions":[{"data":"5188","value":"MELBOURNE,
+  3000"}]})
