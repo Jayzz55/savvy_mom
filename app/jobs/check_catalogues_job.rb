@@ -1,8 +1,8 @@
 require 'capybara'
 require 'capybara/poltergeist'
-require_relative '../../app/jobs/scrape_catalogues_job.rb'
-require_relative '../../app/jobs/delete_catalogues_job.rb'
-require_relative '../../app/jobs/capybara_quit_job.rb'
+require './app/jobs/scrape_catalogues_job.rb'
+require './app/jobs/delete_catalogues_job.rb'
+require './app/jobs/capybara_quit_job.rb'
 
 class CheckCataloguesJob < ActiveJob::Base
   include Capybara::DSL
@@ -11,17 +11,19 @@ class CheckCataloguesJob < ActiveJob::Base
   def perform
 
     published_catalogue_nums = scrape_published_catalogue_nums
+    
+    catalogue_to_be_added = catalogue_to_add(published_catalogue_nums)
+    ScrapeCataloguesJob.perform_later(catalogue_to_be_added) if catalogue_to_be_added.any?
 
-    current_catalogue = {}
-    Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}
-
-    known_catalogue_nums = Catalogue.pluck(:catalogue_num) 
-    catalogue_to_add = published_catalogue_nums - known_catalogue_nums
-    ScrapeCataloguesJob.perform_later(catalogue_to_add) if catalogue_to_add.any?
-
-    delete_old_duplicate_catalogue(current_catalogue, published_catalogue_nums, catalogue_to_add)  
+    catalogue_to_be_deleted = catalogue_to_delete(published_catalogue_nums, catalogue_to_be_added)
+    DeleteCataloguesJob.perform_later(catalogue_to_be_deleted) if catalogue_to_be_deleted.any?  
 
     CapybaraQuitJob.perform_later
+  end
+
+  def catalogue_to_add(published_catalogue_nums)
+    known_catalogue_nums = Catalogue.pluck(:catalogue_num) 
+    return published_catalogue_nums - known_catalogue_nums
   end
 
   def scrape_published_catalogue_nums
@@ -66,8 +68,11 @@ class CheckCataloguesJob < ActiveJob::Base
     page.find('div.autocomplete-suggestion strong').click
   end
 
-  def delete_old_duplicate_catalogue(current_catalogue, published_catalogue_nums, catalogue_to_add)
+  def catalogue_to_delete(published_catalogue_nums, catalogue_to_add)
     catalogue_to_delete = []
+
+    current_catalogue = {}
+    Catalogue.all.each{|c| current_catalogue[c.id] = c.catalogue_num}
 
     #gather old catalogues and posts
     old_data = current_catalogue.values + catalogue_to_add - published_catalogue_nums
@@ -77,7 +82,6 @@ class CheckCataloguesJob < ActiveJob::Base
     duplicate_data = duplicate_hash.select{|k,v| v>1}.keys
 
     #delete old and duplicate catalogues
-    catalogue_to_delete = old_data + duplicate_data
-    DeleteCataloguesJob.perform_later(catalogue_to_delete) if catalogue_to_delete.any?
+    return catalogue_to_delete = old_data + duplicate_data
   end
 end
