@@ -6,8 +6,10 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require "capybara/poltergeist"
+require 'billy/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
-Capybara.javascript_driver = :poltergeist
+# Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :poltergeist_billy
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -55,3 +57,24 @@ RSpec.configure do |config|
   # Make Factory Girl's methods avilable
     config.include FactoryGirl::Syntax::Methods
 end
+
+Billy.configure do |c|
+  c.cache = true
+  c.cache_request_headers = false
+  c.ignore_params = ["http://www.google-analytics.com/__utm.gif",
+                     "https://r.twimg.com/jot",
+                     "http://p.twitter.com/t.gif",
+                     "http://p.twitter.com/f.gif",
+                     "http://www.facebook.com/plugins/like.php",
+                     "https://www.facebook.com/dialog/oauth",
+                     "http://cdn.api.twitter.com/1/urls/count.json"]
+  c.path_blacklist = []
+  c.persist_cache = true
+  c.ignore_cache_port = true # defaults to true
+  c.non_successful_cache_disabled = false
+  c.non_successful_error_level = :warn
+  c.non_whitelisted_requests_disabled = false
+  c.cache_path = 'spec/req_cache/'
+  c.whitelist = ['test.host', 'localhost', '127.0.0.1']
+end
+

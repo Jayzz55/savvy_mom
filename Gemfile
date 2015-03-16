@@ -24,7 +24,7 @@ group :test do
   gem 'email_spec'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
-  gem 'pry-debugger', '~> 0.2.3'
+  gem 'pry-byebug'
   gem "shoulda-matchers"
 end
 
@@ -85,4 +85,6 @@ gem 'sidekiq', '3.2.5'
 gem 'capybara'
 
 gem 'poltergeist'
+
+gem 'puffing-billy'
 
