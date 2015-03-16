@@ -43,8 +43,6 @@ class ScrapeCataloguesJob < ActiveJob::Base
     end
   end
 
-  private
-
   def create_new_posts(catalogue_num)
     all('div.item-landscape').each do |item|
       description = item.find('span.item-details h1 a').text
