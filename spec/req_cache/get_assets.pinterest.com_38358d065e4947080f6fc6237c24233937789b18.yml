@@ -1,0 +1,19 @@
+---
+:scope: 
+:url: http://assets.pinterest.com/js/pinit.js
+:body: ''
+:status: 200
+:method: get
+:headers:
+  x-amz-id-2: VtE+PV8Ol5+NBMvBA+ehOba/RrsnTTeD76U0QNg3ySrWMaeO71B2ehxF4zZY19q7
+  x-amz-request-id: A58893FB5B872FDF
+  x-amz-version-id: gGhhYglkmwz8YK5rneHHM7qC2vFJKAAZ
+  Last-Modified: Mon, 09 Mar 2015 18:49:24 GMT
+  ETag: '"434f699bbd9d9b3a3abb5d44a1ec4310"'
+  Content-Type: application/javascript
+  Server: AmazonS3
+  Content-Length: '313'
+  Cache-Control: max-age=80
+  Date: Tue, 17 Mar 2015 12:46:23 GMT
+  Connection: close
+:content: '!function(a,b,c){var d,e,f;f="PIN_"+~~((new Date).getTime()/864e5),a[f]||(a[f]=!0,a.setTimeout(function(){d=b.getElementsByTagName("SCRIPT")[0],e=b.createElement("SCRIPT"),e.type="text/javascript",e.async=!0,e.src=c,d.parentNode.insertBefore(e,d)},10))}(window,document,"//assets.pinterest.com/js/pinit_main.js");'

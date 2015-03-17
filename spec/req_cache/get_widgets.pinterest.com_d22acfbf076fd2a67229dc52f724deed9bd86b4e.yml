@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8315%2Ffood-and-beverage%2Fgroceries%2Fdrinks%2Fschweppes-soft-drink-mineral-water-or-mixers-125-litre%2F8315109%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FColes-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Tue, 17 Mar 2015 12:46:45 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Tue, 17 Mar 2015 13:01:45 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '277275805249'
+  Age: '0'
+  X-Served-By: cache-sjc3123-SJC
+  X-Cache: MISS
+  X-Cache-Hits: '0'
+  X-Timer: S1426596405.840382099,VS0,VE82
+  Connection: close
+:content: PIN_1426596553303.f.callback[8]({"url":"http://salefinder.com.au/8315/food-and-beverage/groceries/drinks/schweppes-soft-drink-mineral-water-or-mixers-125-litre/8315109/","count":0})

@@ -1,0 +1,14 @@
+---
+:scope: 
+:url: http://salefinder.com.au/ajax/locationsearch?query=Melbourne%2C
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Tue, 17 Mar 2015 12:46:31 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  X-Powered-By: PHP/5.3.3
+  Content-Length: '72'
+  Connection: close
+  Content-Type: application/json
+:content: jQuery18206287520830519497_1426596533442({"result":[],"suggestions":[]})

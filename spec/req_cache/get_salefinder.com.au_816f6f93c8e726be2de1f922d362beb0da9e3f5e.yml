@@ -1,0 +1,15 @@
+---
+:scope: 
+:url: http://salefinder.com.au/ajax/locationsearch?query=Melbourne%2C+3000
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Tue, 17 Mar 2015 12:46:35 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  X-Powered-By: PHP/5.3.3
+  Content-Length: '157'
+  Connection: close
+  Content-Type: application/json
+:content: jQuery18206287520830519497_1426596533442({"Id":"5188","postcode":"3000","displayName":"MELBOURNE","suggestions":[{"data":"5188","value":"MELBOURNE,
+  3000"}]})

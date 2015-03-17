@@ -26,6 +26,8 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-byebug'
   gem "shoulda-matchers"
+  gem "selenium-webdriver"
+  gem 'chromedriver-helper'
 end
 
 # Use SCSS for stylesheets
