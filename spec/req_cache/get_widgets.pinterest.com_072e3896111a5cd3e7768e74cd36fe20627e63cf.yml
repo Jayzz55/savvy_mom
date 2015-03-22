@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8356%2Ffood-and-beverage%2Fgroceries%2Fbreakfast-foods%2Fsanitarium-weetbix-organic-750g%2F8356110%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 18 Mar 2015 07:21:59 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 18 Mar 2015 07:36:45 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '425352067414'
+  Age: '14'
+  X-Served-By: cache-lax1428-LAX
+  X-Cache: HIT
+  X-Cache-Hits: '1'
+  X-Timer: S1426663319.047276497,VS0,VE0
+  Connection: close
+:content: PIN_1426663467484.f.callback[9]({"url":"http://salefinder.com.au/8356/food-and-beverage/groceries/breakfast-foods/sanitarium-weetbix-organic-750g/8356110/","count":0})

@@ -5,8 +5,8 @@
 :status: 200
 :method: get
 :headers:
-  x-amz-id-2: twlwKQ4NaknTJ3Z6h2uT73AZOG8XQ/9iSQ0+haoiYVC9SrtoTLDkOchsyEI6Rg63
-  x-amz-request-id: 268BF0BBC4188F8B
+  x-amz-id-2: W97L+4aRw1CFXkoE/4f4OjUD5D6Kpfs3LIwqVyUKEtt2vEoh0chO1zGkMNq7Vlay
+  x-amz-request-id: 5E9702C45E72FDFD
   x-amz-version-id: gLfu.dFB2XcZ5CQ8Jziqv_eW9NlSi3cy
   Last-Modified: Mon, 09 Mar 2015 18:49:24 GMT
   ETag: '"61ed0472dfcbfaf25e7585f119adf76a"'
@@ -14,8 +14,8 @@
   Content-Type: image/png
   Content-Length: '936'
   Server: AmazonS3
-  Cache-Control: max-age=66702
-  Date: Tue, 17 Mar 2015 12:46:23 GMT
+  Cache-Control: max-age=23853
+  Date: Wed, 18 Mar 2015 07:21:51 GMT
   Connection: close
 :content: !binary |-
   iVBORw0KGgoAAAANSUhEUgAAACsAAAAVCAYAAADfLRcdAAADb0lEQVRIx82X

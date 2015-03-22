@@ -1,19 +1,19 @@
 ---
 :scope: 
-:url: https://log.pinterest.com/?guid=aUappzdfXdiQ&type=pidget&sub=www&button_count=12&follow_count=0&pin_count=0&profile_count=0&board_count=0&via=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0
+:url: https://log.pinterest.com/?guid=ndqCcb613EZs&type=pidget&sub=www&button_count=12&follow_count=0&pin_count=0&profile_count=0&board_count=0&via=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0
 :body: ''
 :status: 200
 :method: get
 :headers:
   Accept-Ranges: bytes
   Age: '0'
-  Date: Tue, 17 Mar 2015 12:46:27 GMT
-  Set-Cookie: _pinterest_cm=TWc9PSZhY1B3d2RzSmU1UUk1Wmd0d201UmlNdVduSzl0V0MzK0dqc3lsTjBwYmFHRzY0U0d2b2MxVXhTdElpWmI4Q1R5TGRoUFE4RHFIYkJoSmZ0NnZJWE9qQjJTK3E1bVB4TVlvWWFhUFQzdStNQXg3K1dWSmRVWnIyRWpRZnVOQXIwVyZnVEJiNWpXMzBzbTMxWEl1bXZpU3NnYW5pNGc9;
-    Expires=Wed, 16 Mar 2016 12:46:27 GMT; Domain=.pinterest.com
+  Date: Wed, 18 Mar 2015 07:21:58 GMT
+  Set-Cookie: _pinterest_cm=TWc9PSZndWdkckpROW84cVZ5d0I0TnkwQWVFaXp0TkNTb1ZxYmtBQStNOTNVcnJBQVRzRmtaN1Z5U05idzhPSjMzYzdTRTFGQkV6WjQ0bFI3a2QzOHkwbXVqSDVlZEpIbkVTZURHVHpPR1ltVkZLV3BTNUJ2NEdjRDNtRHhUV1FCeGxGZiYrSXZPZGVpU1RBYW9nMk02M1ljRmd6TGVWbVU9;
+    Expires=Thu, 17 Mar 2016 07:21:58 GMT; Domain=.pinterest.com
   Via: 1.1 varnish
   X-Pinterest-Host: widgets.pinterest.com
-  X-Pinterest-RID: '456790768511'
-  X-Varnish: '844253788'
+  X-Pinterest-RID: '534411835151'
+  X-Varnish: '888030112'
   Content-Length: '0'
   Connection: close
 :content: ''

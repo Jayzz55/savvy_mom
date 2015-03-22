@@ -5,10 +5,10 @@
 :status: 200
 :method: get
 :headers:
-  Date: Tue, 17 Mar 2015 12:46:30 GMT
+  Date: Wed, 18 Mar 2015 07:22:03 GMT
   Server: Apache/2.2.15 (Red Hat)
-  Last-Modified: Tue, 19 Nov 2013 02:15:48 GMT
-  ETag: '"9c60b3-351f-4eb7e3e290ad6"'
+  Last-Modified: Tue, 19 Nov 2013 02:15:40 GMT
+  ETag: '"396e38-351f-4eb7e3db2eb84"'
   Accept-Ranges: bytes
   Content-Length: '13599'
   Connection: close
