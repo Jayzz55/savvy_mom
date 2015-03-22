@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8356%2Ffood-and-beverage%2Fgroceries%2Fdrinks%2Fangostura-lemon-lime-and-bitters-750ml%2F8356105%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 18 Mar 2015 07:21:57 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 18 Mar 2015 07:36:45 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '492546145430'
+  Age: '13'
+  X-Served-By: cache-lax1420-LAX
+  X-Cache: HIT
+  X-Cache-Hits: '1'
+  X-Timer: S1426663317.929798603,VS0,VE0
+  Connection: close
+:content: PIN_1426663467484.f.callback[4]({"url":"http://salefinder.com.au/8356/food-and-beverage/groceries/drinks/angostura-lemon-lime-and-bitters-750ml/8356105/","count":0})

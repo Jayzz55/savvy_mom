@@ -1,0 +1,27 @@
+---
+:scope: 
+:url: http://salefinder.com.au/css/images/header-search-bg.png
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 18 Mar 2015 07:21:53 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  Last-Modified: Wed, 21 Nov 2012 11:30:42 GMT
+  ETag: '"9c1372-1dd-4ceffae3c1c80"'
+  Accept-Ranges: bytes
+  Content-Length: '477'
+  Connection: close
+  Content-Type: image/png
+:content: !binary |-
+  iVBORw0KGgoAAAANSUhEUgAAAlIAAAAzCAYAAABc6OalAAAAGXRFWHRTb2Z0
+  d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNrs3bFtwkAUgGEf
+  DJABGIM2EpkpFUwAFRtRWNSMkcpNGACZdxIFleUcyhXH90lPsiivsH7hZzkN
+  w9A9bGK+Y9Yxqw4AgGc/MZeYY0yff0iPkNrG7J0PAMAsu5hDDqn8T9QpZulM
+  AABmucV85ZA6x8Wn8wAA+JM+h9RvXHw4C6BFKaVuHEcHAfyHaw4pdxgAgAIL
+  RwAAIKTeUn5sAQAIKQrY/RC3AAgpELcACCkAACEFAMDrIdXazocdFgCgWki1
+  tvNhhwUAqBZSAMA0TzuEFLiRABTytENIgRsJAAgpAAAhBQAgpAAAhBQAAEIK
+  AEBIAQAIKQAAIQUAIKQAABBSAABCCpjmm4cAQgoo5JuHAEIKAEBIAQAIKQAA
+  hBQAdXj5ASEFAIW8/ICQAgBASAEACCkAACEF8LrWFpotaIOQAqimtYVmC9og
+  pAAAhBQAAEIKAEBIAQAIKQAAIQUAIKQAABBSAABCCgBASAEACCkAACFVn49x
+  AgAtuAswACy+PtV47vV/AAAAAElFTkSuQmCC

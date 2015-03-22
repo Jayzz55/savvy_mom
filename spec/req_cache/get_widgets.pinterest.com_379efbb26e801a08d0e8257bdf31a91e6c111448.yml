@@ -1,0 +1,24 @@
+---
+:scope: 
+:url: https://widgets.pinterest.com/v1/urls/count.json?url=http%3A%2F%2Fsalefinder.com.au%2F8390%2Ffood-and-beverage%2Fgroceries%2Fbiscuits-and-snacks%2Fkettle-potato-chips-185g-or-chunky-chips-150g%2F8390109%2F&ref=http%3A%2F%2Fsalefinder.com.au%2FColes-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0&source=6
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 18 Mar 2015 07:22:16 GMT
+  Server: Apache
+  Cache-Control: must-revalidate, max-age=887
+  Content-Type: application/javascript
+  Expires: Wed, 18 Mar 2015 07:37:16 GMT
+  Via:
+  - 1.1 varnish
+  - 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '995841614514'
+  Age: '0'
+  X-Served-By: cache-lax1424-LAX
+  X-Cache: MISS
+  X-Cache-Hits: '0'
+  X-Timer: S1426663336.767686844,VS0,VE68
+  Connection: close
+:content: PIN_1426663486197.f.callback[8]({"url":"http://salefinder.com.au/8390/food-and-beverage/groceries/biscuits-and-snacks/kettle-potato-chips-185g-or-chunky-chips-150g/8390109/","count":0})

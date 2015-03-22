@@ -1,0 +1,25 @@
+---
+:scope: 
+:url: http://salefinder.com.au/css/images/shortlist_icon.png
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Date: Wed, 18 Mar 2015 07:21:53 GMT
+  Server: Apache/2.2.15 (Red Hat)
+  Last-Modified: Wed, 21 Nov 2012 11:30:46 GMT
+  ETag: '"380fad-171-4ceffae792580"'
+  Accept-Ranges: bytes
+  Content-Length: '369'
+  Connection: close
+  Content-Type: image/png
+:content: !binary |-
+  iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAIAAAD5fKMWAAAAGXRFWHRTb2Z0
+  d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARNJREFUeNpi/P///++nz172
+  Tf287yAjJye/h4tERSEjG9vvFy+fN3V+PX6KmZ+f18lOvDSPiZOT8fer19cM
+  bYEaGGCAx8ZSYdHMm1auQA1wQaAG1V0bGB/llLyaMosBFbAICf559x5NEGgE
+  c+KLD38/fkKT+Pf9BwMGADqP6feLVwzEgT8vXjFxqKsSqZpDS50JGALEKGVk
+  ZhbNTGYSigoV8PMiqFqiuoRTV5sRGN7/vn+/5eD99dRZXEqBJiounQNkMIEw
+  J6fa3s3AYMaqVDghGhh2UM5/GPj38ycw7M8w8MHRWTaRF72T/yMBhv+o4P3G
+  ref5ZYBKL6sYfD1zHk0WXTUQ/Hz4+ElF/d/PXzClAAIMAIFawK7yPVduAAAA
+  AElFTkSuQmCC

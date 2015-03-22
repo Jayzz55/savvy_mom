@@ -30,21 +30,22 @@ class CheckCataloguesJob < ActiveJob::Base
     # regions = ["Melbourne, 3000", "Sydney, 2000", "Brisbane city, 4000", 'Perth, 6000']
     regions = ["Melbourne, 3000"]
     published_catalogue_nums = []
-    session_wait = 7
+    session_wait = 3
     regions.each do |region|
-      ['Woolworths', 'Coles'].each do |shop|
+      
+      visit "http://salefinder.com.au/Woolworths-catalogue?qs=1,,0,0,0"
+      set_catalogue_region(region)
 
-        #visit the site
-        visit "http://salefinder.com.au/#{shop}-catalogue?qs=1,,0,0,0"
+      sleep session_wait
 
-        #set the region of the catalogue we want to gather
-        set_catalogue_region(region)
+      visit "http://salefinder.com.au/Coles-catalogue?qs=1,,0,0,0"
+      published_catalogue_nums += scrape_catalogue_number
 
-        #scrape the catalogue number information
-        published_catalogue_nums += scrape_catalogue_number
-        
-        sleep session_wait
-      end
+      sleep session_wait
+
+      visit "http://salefinder.com.au/Woolworths-catalogue?qs=1,,0,0,0"
+      published_catalogue_nums += scrape_catalogue_number
+      
     end
     return published_catalogue_nums
   end
@@ -61,8 +62,9 @@ class CheckCataloguesJob < ActiveJob::Base
   end
 
   def set_catalogue_region(region)
-    session_wait = 2
-    page.find('a#header-change-region').trigger('click')
+    session_wait = 5
+    # page.find('a#header-change-region').trigger('click')
+    page.execute_script('$("a#header-change-region").trigger("click")')
     page.find('input#location-search').set(region)
     sleep session_wait
     page.find('div.autocomplete-suggestion strong').click

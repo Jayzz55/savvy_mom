@@ -1,0 +1,41 @@
+---
+:scope: 
+:url: http://assets.pinterest.com/images/PinExt.png
+:body: ''
+:status: 200
+:method: get
+:headers:
+  x-amz-id-2: W97L+4aRw1CFXkoE/4f4OjUD5D6Kpfs3LIwqVyUKEtt2vEoh0chO1zGkMNq7Vlay
+  x-amz-request-id: 5E9702C45E72FDFD
+  x-amz-version-id: gLfu.dFB2XcZ5CQ8Jziqv_eW9NlSi3cy
+  Last-Modified: Mon, 09 Mar 2015 18:49:24 GMT
+  ETag: '"61ed0472dfcbfaf25e7585f119adf76a"'
+  Accept-Ranges: bytes
+  Content-Type: image/png
+  Content-Length: '936'
+  Server: AmazonS3
+  Cache-Control: max-age=23853
+  Date: Wed, 18 Mar 2015 07:21:51 GMT
+  Connection: close
+:content: !binary |-
+  iVBORw0KGgoAAAANSUhEUgAAACsAAAAVCAYAAADfLRcdAAADb0lEQVRIx82X
+  2WtTQRTG++TfIYgoxR1XxH1HBauIPvigiOCCuygiIqIoLrXVqijuWuuGuO+K
+  uBSttjVJQ2xjE5P03uy5SXPTNt34POfUXBQ0t6BiAl8yS86Z38x8M8nNqygv
+  70HaTVJIyEEp3/l65NHbXq/bjdbWVuTii7mYjzkZNtxGDZ2dnTkr5mNOhkVH
+  R0fOizkFtr2tLedlwLIvuqPYqzdoKDkO15ZtUI6dhO5ydzv2T2XApltasqol
+  mcSXNRvxachIeHbsQuD0OdQtXoaqvgMQKLtmGv83ZMA2NzdnlfdgMWzjpqA1
+  EkGq3oU22hb2kW/PflT27oeE8ws0ixWBm7dMcyUVFcqps2jSU1LnmMavHtM4
+  A7Yplcqq6oHDEb5yHcFbd/CxZx+oF0ulXa+tk7py5jw+L1oC+8wC01zeg0Wy
+  I3owiMjrtxKf+FxrGmfA6rTNv1OSVpMTxt5VwL19p5RD9x5In2a1dcGePI3A
+  2QtIfrJCTySgXCpDtKoaDdQWeV/xU77IsxfQnjxHtOIDnKvWEfhAqKVXsjKw
+  DNhGGiCb7NNmw1N4GL7iElT2ykdS9Us7QzGs/+oN+Qy/fIUgicvW8VNhGTGm
+  yyY04Uwuy6hx8BYfJcAyOQOSe1+hKYMBm9C0rNLtDvgvXoZzxWpU5Q9GnGBj
+  5DPr2MniZbYBrxDvgqfoCKr7D0Vai8tB5HImT+jDR5mIRqueisclJnTtBlrI
+  k2YMBqwWi2UVzyyl67JSNROnk4eHobLPAAHlA1e3ai0cBQsQp6T2OfNRv2aD
+  lJ3UXktezuTxnjglk22kPvXx0y7wGrvp+CwDNkYrYqbQd38m3r1Hs8eDJjpc
+  7e3tAmWbNAOuTVvRQCdbbHGhVGJsE6bBtXkboooidefq9TLBkMOBmllzxVKh
+  aguU+w9NxzdgI6GQqZQHj2AZNhoalWPRKDRSps+5bKVA2uctFI/GaCLcXrd0
+  ubTXHzgk9eDtu5KjKn+Q/LBwn4XhyR5m4xuwYbpGzKQ+fAw/nfpf9bHn+A9H
+  Op1GJ92/0XD4p3Y+zVxPkE95N/iO5utI/qTQnc2TNxvfgA36/aaK0taz17rz
+  3X+hDGxY9fkQUNWs4gCz7/wrKcRHnAGG3e2w2eCjlfPTQcg1MRfzMWfeD481
+  7hx9rHH/+FjzX0VPLt3WNxs/a+oemzbMAAAAAElFTkSuQmCC

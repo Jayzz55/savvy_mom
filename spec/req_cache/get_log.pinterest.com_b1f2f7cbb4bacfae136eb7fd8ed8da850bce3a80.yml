@@ -1,0 +1,19 @@
+---
+:scope: 
+:url: https://log.pinterest.com/?guid=ndqCcb613EZs&type=pidget&sub=www&button_count=12&follow_count=0&pin_count=0&profile_count=0&board_count=0&via=http%3A%2F%2Fsalefinder.com.au%2FWoolworths-catalogue%3Fqs%3D1%2C%2C0%2C0%2C0
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Accept-Ranges: bytes
+  Age: '0'
+  Date: Wed, 18 Mar 2015 07:21:58 GMT
+  Set-Cookie: _pinterest_cm=TWc9PSZndWdkckpROW84cVZ5d0I0TnkwQWVFaXp0TkNTb1ZxYmtBQStNOTNVcnJBQVRzRmtaN1Z5U05idzhPSjMzYzdTRTFGQkV6WjQ0bFI3a2QzOHkwbXVqSDVlZEpIbkVTZURHVHpPR1ltVkZLV3BTNUJ2NEdjRDNtRHhUV1FCeGxGZiYrSXZPZGVpU1RBYW9nMk02M1ljRmd6TGVWbVU9;
+    Expires=Thu, 17 Mar 2016 07:21:58 GMT; Domain=.pinterest.com
+  Via: 1.1 varnish
+  X-Pinterest-Host: widgets.pinterest.com
+  X-Pinterest-RID: '534411835151'
+  X-Varnish: '888030112'
+  Content-Length: '0'
+  Connection: close
+:content: ''
