@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20150302070631) do
   create_table "posts", force: :cascade do |t|
     t.text     "image"
     t.string   "description"
-    t.string   "saving"
-    t.string   "saving_percentage"
+    t.integer  "saving"
+    t.integer  "saving_percentage"
     t.string   "price_info"
     t.string   "unit_price"
     t.string   "saving_info"

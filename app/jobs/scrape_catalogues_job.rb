@@ -151,6 +151,6 @@ class ScrapeCataloguesJob < ActiveJob::Base
     #This is to fixed misinformation captured, and set savings to ''
     savings = '' if savings.to_f < 0.0
 
-    return savings_array = [savings, savings_percentage]
+    return savings_array = [savings.to_f.floor, savings_percentage.to_i]
   end
 end
