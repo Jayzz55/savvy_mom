@@ -1,4 +1,37 @@
 <div class="filter">
- <p>test</p>
- <p>another test</p>
+  <%= form_tag posts_path, method: :get, class: 'form-inline' do %>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "Minimum price saving" %>
+      </div>
+      <div class="col-md-4">
+        <%= text_field_tag :min_saving, params[:min_saving], placeholder: "Minimum $ saving", class: "form-control input-sm" %>
+      </div>
+      <div class="col-md-2">
+        <%= label_tag "Minimum percentage saving" %>
+      </div>
+      <div class="col-md-4">
+        <%= text_field_tag :min_saving_percentage, params[:min_saving_percentage], placeholder: "Minimum % saving", class: "form-control input-sm" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "Shops : " %>
+      </div>
+      <div class="col-md-2">
+        <%= label_tag :coles %>
+        <%= check_box_tag :coles, "Coles", params[:coles], class: "form-control input-sm" %>
+      </div>
+      <div class="col-md-2">
+        <%= label_tag :woolworths %>
+        <%= check_box_tag :woolworths, "Woolworths", params[:woolworths], class: "form-control input-sm" %>
+      </div>
+      <div class="col-md-6">
+      <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+      </div>
+    </div>
+    
+  <% end %>
 </div>
