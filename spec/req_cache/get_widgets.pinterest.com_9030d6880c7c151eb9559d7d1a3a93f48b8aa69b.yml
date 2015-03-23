@@ -5,20 +5,20 @@
 :status: 200
 :method: get
 :headers:
-  Date: Wed, 18 Mar 2015 07:21:59 GMT
+  Date: Mon, 23 Mar 2015 11:10:31 GMT
   Server: Apache
   Cache-Control: must-revalidate, max-age=887
   Content-Type: application/javascript
-  Expires: Wed, 18 Mar 2015 07:36:45 GMT
+  Expires: Mon, 23 Mar 2015 11:24:18 GMT
   Via:
   - 1.1 varnish
   - 1.1 varnish
   X-Pinterest-Host: widgets.pinterest.com
-  X-Pinterest-RID: '494901892709'
-  Age: '14'
-  X-Served-By: cache-lax1426-LAX
+  X-Pinterest-RID: '821625435000'
+  Age: '73'
+  X-Served-By: cache-sjc3132-SJC
   X-Cache: HIT
   X-Cache-Hits: '1'
-  X-Timer: S1426663319.046605349,VS0,VE0
+  X-Timer: S1427109031.688088179,VS0,VE0
   Connection: close
-:content: PIN_1426663467484.f.callback[11]({"url":"http://salefinder.com.au/8356/food-and-beverage/groceries/baking/betty-crocker-cake-range-450600g--excludes-irresistibles/8356112/","count":0})
+:content: PIN_1427109194557.f.callback[11]({"url":"http://salefinder.com.au/8356/food-and-beverage/groceries/baking/betty-crocker-cake-range-450600g--excludes-irresistibles/8356112/","count":0})

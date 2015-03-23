@@ -5,17 +5,16 @@
 :status: 200
 :method: get
 :headers:
-  Content-Type: image/png
   Last-Modified: Mon, 01 Jan 2001 08:00:00 GMT
+  Content-Type: image/png
   Content-MD5: mQCwCAAKHD+AV8oddNLhdw==
   Access-Control-Allow-Origin: "*"
-  Timing-Allow-Origin: "*"
   X-Content-Type-Options: nosniff
-  X-FB-Debug: g8qce1UqdkXSbeqG1Xot7LkWF5m8bVqBSXrqz1w7dzoCTh6O3gdl+yGRaXxy179xs12yn9lXrSaETMrvvnumYw==
+  X-FB-Debug: LrC+QP7x/o1vke4OZ2YhFvpaQo3nqR4tYJtNQgHqUqg=
   Content-Length: '1329'
-  Cache-Control: public, max-age=12715616
-  Expires: Wed, 12 Aug 2015 11:28:54 GMT
-  Date: Wed, 18 Mar 2015 07:21:58 GMT
+  Cache-Control: public, max-age=21035995
+  Expires: Sat, 21 Nov 2015 22:30:26 GMT
+  Date: Mon, 23 Mar 2015 11:10:31 GMT
   Connection: close
 :content: !binary |-
   iVBORw0KGgoAAAANSUhEUgAAAB4AAABICAYAAADh50VIAAAE+ElEQVR42u3Y

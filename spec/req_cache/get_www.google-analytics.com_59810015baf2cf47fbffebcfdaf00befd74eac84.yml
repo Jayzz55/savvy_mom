@@ -5,15 +5,15 @@
 :status: 200
 :method: get
 :headers:
-  Date: Wed, 18 Mar 2015 06:47:53 GMT
-  Expires: Wed, 18 Mar 2015 08:47:53 GMT
+  Date: Mon, 23 Mar 2015 10:48:34 GMT
+  Expires: Mon, 23 Mar 2015 12:48:34 GMT
   Last-Modified: Thu, 05 Feb 2015 17:35:24 GMT
   X-Content-Type-Options: nosniff
   Content-Type: text/javascript
   Vary: Accept-Encoding
   Server: Golfe2
-  Age: '2040'
   Alternate-Protocol: 80:quic,p=0.5
+  Age: '1315'
   Cache-Control: public, max-age=7200
   Accept-Ranges: none
   Connection: close

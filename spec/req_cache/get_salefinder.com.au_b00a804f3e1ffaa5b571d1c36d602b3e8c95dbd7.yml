@@ -5,7 +5,7 @@
 :status: 200
 :method: get
 :headers:
-  Date: Wed, 18 Mar 2015 07:22:13 GMT
+  Date: Mon, 23 Mar 2015 11:10:44 GMT
   Server: Apache/2.2.15 (Red Hat)
   X-Powered-By: PHP/5.3.3
   Expires: Thu, 19 Nov 1981 08:52:00 GMT
@@ -504,10 +504,17 @@
   Catalogue VIC METRO</div>\n\t\t\t\t<div class=\"catalogue-date\">Wed 18 Mar 2015
   - Tue 24 Mar 2015</div>\n\t\t\t\t<p><iframe src=\"//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsalefinder.com.au%2Fcoles-catalogue%2Fcoles-catalogue-vic-metro%2F8390%2Fcatalogue&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=252008274815721\"
   scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:130px;
+  height:29px;\" allowTransparency=\"true\"></iframe></p>\n\t\t\t</div>\n\t\t</li>\n\t\t\t<li>\n\t\t\t<div
+  class=\"retailer-catalogue\">\n\t\t\t\t<a class=\"catalogue-image\" href=\"/coles-catalogue/coles-catalogue-vic-metro/8451/catalogue\">\n\t\t\t\t\t<img
+  src=\"http://salefinder.com.au/images/featureimage/iphone/8451.jpg\" alt=\"Coles
+  Catalogue VIC METRO\" width=\"205\" />\n\t\t\t\t</a>\n\t\t\t\t<div class=\"catalogue-name\">Coles
+  Catalogue VIC METRO</div>\n\t\t\t\t<div class=\"catalogue-date\">Wed 25 Mar 2015
+  - Tue 31 Mar 2015</div>\n\t\t\t\t<p><iframe src=\"//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsalefinder.com.au%2Fcoles-catalogue%2Fcoles-catalogue-vic-metro%2F8451%2Fcatalogue&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=252008274815721\"
+  scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:130px;
   height:29px;\" allowTransparency=\"true\"></iframe></p>\n\t\t\t</div>\n\t\t</li>\n\t\t</ul>\n</div>\n\t<div
   id=\"retailer-search-tab\">\n<form name=\"retailer-search-form\" action=\"/retailer/search\"
   method=\"GET\">\n\t<input type=\"hidden\" name=\"retailerId\" value=\"148\" />\n\t<span
-  id=\"product-count\">Showing 0-12 of 188 products for <strong>Coles</strong></span>\n\t<label
+  id=\"product-count\">Showing 0-12 of 399 products for <strong>Coles</strong></span>\n\t<label
   id=\"text\"><input class=\"on\" name=\"searchText\" type=\"text\" class=\"input\"
   /></label>\n\t<label id=\"submit\"><input name=\"submitSearch\" type=\"submit\"
   value=\"\" /></label>\n</form>\n</div>\n<div id=\"retailer-products\">\n\t\t\t<div
@@ -519,7 +526,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/pet-care/pedigree-dog-food-12kg/8390101/\"
   class=\"item-name\">Pedigree Dog Food 1.2kg</a></h1>\r\n\t\t\t<span class=\"item-description\">1/2
   PRICE</span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $3.69,
-  Save  $1.85 <br /><span class=\"price\">  $1.84 each</span>\n<br />\t\t\t\t\t\t\t\t<span
+  Save  $1.85 <br /><span class=\"price\">  $1.84 each</span>\r\n<br />\t\t\t\t\t\t\t\t<span
   class=\"comparative-text\">$0.15 per 100g</span>\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/pet-care/pedigree-dog-food-12kg/8390101/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
@@ -538,7 +545,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/toiletries/sorbent-toilet-tissue-8-pack/8390102/\"
   class=\"item-name\">Sorbent Toilet Tissue 8 Pack</a></h1>\r\n\t\t\t<span class=\"item-description\">1/2
   PRICE</span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $7.00,
-  Save  $3.50 <br /><span class=\"price\">  $3.50 each</span>\n<br />\t\t\t\t\t\t\t\t<span
+  Save  $3.50 <br /><span class=\"price\">  $3.50 each</span>\r\n<br />\t\t\t\t\t\t\t\t<span
   class=\"comparative-text\">$0.24 per 100 sheets</span>\t\t\t</div>\r\n\t\t\t<div
   class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/toiletries/sorbent-toilet-tissue-8-pack/8390102/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
@@ -559,7 +566,7 @@
   class=\"item-name\">Pringles Potato Chips 140g-150g or Special K Kellogg&#8217;s
   Crackers Chips 100g</a></h1>\r\n\t\t\t<span class=\"item-description\">1/2 PRICE</span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $4.10, Save  $2.10 <br /><span class=\"price\">
-  \ $2.00 each</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
+  \ $2.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/pringles-potato-chips-140g150g-or-special-k-kelloggs-crackers-chips-100g/8390103/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390103\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -577,7 +584,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/cadbury-medium-bars-30g60g/8390104/\"
   class=\"item-name\">Cadbury Medium Bars 30g-60g</a></h1>\r\n\t\t\t<span class=\"item-description\">1/2
   PRICE</span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $1.99,
-  Save  $1.00 <br /><span class=\"price\">  $0.99 each</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
+  Save  $1.00 <br /><span class=\"price\">  $0.99 each</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
   class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/cadbury-medium-bars-30g60g/8390104/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390104\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -597,7 +604,7 @@
   class=\"item-name\">Coles Australian Beef Porterhouse Steak Large Tray</a></h1>\r\n\t\t\t<span
   class=\"item-description\">Australian Grown. No Added Hormones.</span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $28.00, Save  $5.00 kg<br /><span
-  class=\"price\">  $23.00 kg</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
+  class=\"price\">  $23.00 kg</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
   class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/meat/coles-australian-beef-porterhouse-steak-large-tray/8390105/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390105\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -619,7 +626,7 @@
   class=\"item-description\">Mix &amp; Match. Any combination.\r\n\r\n\r\nExcludes
   Arnott&#8217;s Tim Tam Chocolicious Bites &amp; TeeVee Snacks</span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tSave  $1.28 <br /><span class=\"price\">2
-  for  $5.00 </span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
+  for  $5.00 </span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/arnotts-chocolate-biscuits-160g250g-smiths-chips-170g175g-doritos-corn-chips-150g170g-or-smiths-chips-6-pack-114g/8390106/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390106\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -638,7 +645,7 @@
   href=\"/8390/food-and-beverage/groceries/drinks/pepsi-solo-or-schweppes-soft-drink-2-litre/8390107/\"
   class=\"item-name\">Pepsi, Solo or Schweppes Soft Drink 2 Litre</a></h1>\r\n\t\t\t<span
   class=\"item-description\"></span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas
-  $3.10, Save  $1.10 <br /><span class=\"price\">  $2.00 each</span>\n<br />\t\t\t\t\t\t\t\t<span
+  $3.10, Save  $1.10 <br /><span class=\"price\">  $2.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t<span
   class=\"comparative-text\">$1.00 per litre</span>\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/drinks/pepsi-solo-or-schweppes-soft-drink-2-litre/8390107/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
@@ -657,7 +664,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/drinks/powerade-sports-drink-600ml/8390108/\"
   class=\"item-name\">Powerade Sports Drink 600mL</a></h1>\r\n\t\t\t<span class=\"item-description\"></span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $3.29, Save  $1.29 <br /><span class=\"price\">
-  \ $2.00 each</span>\n<br />\t\t\t\t\t\t\t\t<span class=\"comparative-text\">$3.33
+  \ $2.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t<span class=\"comparative-text\">$3.33
   per litre</span>\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/drinks/powerade-sports-drink-600ml/8390108/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
@@ -677,7 +684,7 @@
   href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/kettle-potato-chips-185g-or-chunky-chips-150g/8390109/\"
   class=\"item-name\">Kettle Potato Chips 185g or Chunky Chips 150g</a></h1>\r\n\t\t\t<span
   class=\"item-description\"></span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas
-  $4.19, Save  $1.19 <br /><span class=\"price\">  $3.00 each</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
+  $4.19, Save  $1.19 <br /><span class=\"price\">  $3.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div
   class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/kettle-potato-chips-185g-or-chunky-chips-150g/8390109/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390109\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -695,7 +702,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/cadbury-bitesize-120g180g/8390110/\"
   class=\"item-name\">Cadbury Bitesize 120g-180g</a></h1>\r\n\t\t\t<span class=\"item-description\"></span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $3.99, Save  $0.99 <br /><span class=\"price\">
-  \ $3.00 each</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
+  \ $3.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/cadbury-bitesize-120g180g/8390110/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390110\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -713,7 +720,7 @@
   class=\"item-details\">\r\n\t\t\t<h1><a href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/mars-large-bitesize-280g380g/8390111/\"
   class=\"item-name\">Mars Large Bitesize 280g-380g</a></h1>\r\n\t\t\t<span class=\"item-description\"></span>\r\n\t\t\t<div
   class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas $6.70, Save  $2.70 <br /><span class=\"price\">
-  \ $4.00 each</span>\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
+  \ $4.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/biscuits-and-snacks/mars-large-bitesize-280g380g/8390111/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
   class=\"shortlist-button\" href=\"/shortlist/add/8390111\"></a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
@@ -732,7 +739,7 @@
   href=\"/8390/food-and-beverage/groceries/drinks/cocacola-soft-drink-varieties-24x375ml/8390112/\"
   class=\"item-name\">Coca-Cola Soft Drink Varieties 24x375mL</a></h1>\r\n\t\t\t<span
   class=\"item-description\"></span>\r\n\t\t\t<div class=\"price-options\">\r\n\t\t\t\t\t\t\t\tWas
-  $26.80, Save  $9.80 <br /><span class=\"price\">  $17.00 each</span>\n<br />\t\t\t\t\t\t\t\t<span
+  $26.80, Save  $9.80 <br /><span class=\"price\">  $17.00 each</span>\r\n<br />\t\t\t\t\t\t\t\t<span
   class=\"comparative-text\">$1.89 per litre</span>\t\t\t</div>\r\n\t\t\t<div class=\"item-actions\">\r\n\t\t\t\t\t\t\t\t<a
   class=\"more-info-button\" href=\"/8390/food-and-beverage/groceries/drinks/cocacola-soft-drink-varieties-24x375ml/8390112/\">More
   Info</a>\r\n\t\t\t\t<div class=\"extra-buttons-container\">\r\n\t\t\t\t\t<div class=\"extra-buttons\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
@@ -752,7 +759,7 @@
   class=\"pagenums\">9</a><a href=\"/Coles-catalogue?qs=10,,0,0,0\" class=\"pagenums\">10</a><a
   href=\"/Coles-catalogue?qs=11,,0,0,0\" class=\"pagenums\">11</a><a href=\"/Coles-catalogue?qs=12,,0,0,0\"
   class=\"pagenums\">12</a><a href=\"/Coles-catalogue?qs=2,,0,0,0\" class=\"pagenumsblack\">Next
-  &raquo;</a><a href=\"/Coles-catalogue?qs=13,,0,0,0\" class=\"pagenumsblack\">[13-16]</a></div>\t</div>\n</div>\n<div
+  &raquo;</a><a href=\"/Coles-catalogue?qs=13,,0,0,0\" class=\"pagenumsblack\">[13-24]</a></div>\t</div>\n</div>\n<div
   id=\"column-right\">\n\t\t<div id=\"retailer-stores\" class=\"retailer-block\">\r\n\t<h1>Coles
   Stores near MELBOURNE</h1>\r\n\t<ul>\r\n\t\t\t\t\t<li><a href=\"/coles_burwood_east-store/8533\">Coles
   Burwood East</a></li>\r\n\t\t\t\t<li><a href=\"/coles_airport_west-store/8620\">Coles

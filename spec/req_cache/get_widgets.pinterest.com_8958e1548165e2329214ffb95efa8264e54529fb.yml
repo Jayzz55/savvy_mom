@@ -5,20 +5,20 @@
 :status: 200
 :method: get
 :headers:
-  Date: Wed, 18 Mar 2015 07:22:15 GMT
+  Date: Mon, 23 Mar 2015 11:10:46 GMT
   Server: Apache
   Cache-Control: must-revalidate, max-age=887
   Content-Type: application/javascript
-  Expires: Wed, 18 Mar 2015 07:37:15 GMT
+  Expires: Mon, 23 Mar 2015 11:25:46 GMT
   Via:
   - 1.1 varnish
   - 1.1 varnish
   X-Pinterest-Host: widgets.pinterest.com
-  X-Pinterest-RID: '406192380061'
+  X-Pinterest-RID: '759709284861'
   Age: '0'
-  X-Served-By: cache-lax1425-LAX
+  X-Served-By: cache-sjc3128-SJC
   X-Cache: MISS
   X-Cache-Hits: '0'
-  X-Timer: S1426663335.732528210,VS0,VE69
+  X-Timer: S1427109046.755802393,VS0,VE80
   Connection: close
-:content: PIN_1426663486197.f.callback[2]({"url":"http://salefinder.com.au/8390/food-and-beverage/groceries/biscuits-and-snacks/pringles-potato-chips-140g150g-or-special-k-kelloggs-crackers-chips-100g/8390103/","count":0})
+:content: PIN_1427109211272.f.callback[2]({"url":"http://salefinder.com.au/8390/food-and-beverage/groceries/biscuits-and-snacks/pringles-potato-chips-140g150g-or-special-k-kelloggs-crackers-chips-100g/8390103/","count":0})
