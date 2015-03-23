@@ -3,8 +3,6 @@ Capybara.register_driver :poltergeist do |app|
 end
 if Rails.env.test?
 
-  # Capybara.default_driver = :poltergeist_billy
-
   Capybara.register_driver :selenium_chrome_billy do |app|
     Capybara::Selenium::Driver.new(
       app, browser: :chrome,
@@ -14,7 +12,8 @@ if Rails.env.test?
         ]
       )
   end
-  Capybara.default_driver = :selenium_chrome_billy
+  Capybara.default_driver = :poltergeist_billy
+  # Capybara.default_driver = :selenium_chrome_billy
 else
   Capybara.default_driver = :poltergeist
 end
