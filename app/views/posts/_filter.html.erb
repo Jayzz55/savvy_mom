@@ -31,11 +31,11 @@
       </div>
       <div class="col-md-2">
         <%= label_tag :coles %>
-        <%= check_box_tag :coles, "Coles", params[:coles], class: "form-control input-sm" %>
+        <%= check_box_tag :coles, "Coles", params[:coles] = true, class: "form-control input-sm" %>
       </div>
       <div class="col-md-2">
         <%= label_tag :woolworths %>
-        <%= check_box_tag :woolworths, "Woolworths", params[:woolworths], class: "form-control input-sm" %>
+        <%= check_box_tag :woolworths, "Woolworths", params[:woolworths] = true, class: "form-control input-sm" %>
       </div>
     </div>
 
