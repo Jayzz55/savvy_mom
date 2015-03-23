@@ -62,12 +62,17 @@ class CheckCataloguesJob < ActiveJob::Base
   end
 
   def set_catalogue_region(region)
-    session_wait = 5
+    # session_wait = 5
     # page.find('a#header-change-region').trigger('click')
-    page.execute_script('$("a#header-change-region").trigger("click")')
-    page.find('input#location-search').set(region)
-    sleep session_wait
-    page.find('div.autocomplete-suggestion strong').click
+    # sleep 10
+    # page.execute_script('$("a#header-change-region").trigger("click")')
+    # page.find('input#location-search').set(region)
+    # sleep session_wait
+    # page.find('div.autocomplete-suggestion strong').click
+
+    page.execute_script("$.cookie('postcodeId', 5188)")
+    page.execute_script("$.cookie('regionName', 'MELBOURNE, 3000')")
+
   end
 
   def catalogue_to_delete(published_catalogue_nums, catalogue_to_add)
