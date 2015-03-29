@@ -90,3 +90,5 @@ gem 'poltergeist'
 
 gem 'puffing-billy'
 
+gem 'heroku-api'
+
