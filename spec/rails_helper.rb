@@ -72,7 +72,6 @@ Billy.configure do |c|
                      'https://widgets.pinterest.com/',
                      'https://www.facebook.com/',
                      'https://www.facebook.com/connect/ping']
-                     # 'http://salefinder.com.au/ajax/locationsearch']
   # c.path_blacklist = []
   c.persist_cache = true
   c.ignore_cache_port = true # defaults to true
@@ -80,14 +79,9 @@ Billy.configure do |c|
   c.non_successful_error_level = :warn
   c.non_whitelisted_requests_disabled =true
   c.cache_path = 'spec/req_cache/'
-  # Stripe uses jsonp, which changes its callback param based on the current time
-  # That means we'd never hit the cache, so this makes it ignore the param that changes
   c.dynamic_jsonp = true
   c.dynamic_jsonp_keys = ['callback',"_"]
   c.whitelist = ['test.host', 'localhost', '127.0.0.1']
   c.proxied_request_connect_timeout = 20
   c.proxied_request_inactivity_timeout = 20
 end
-
-#puffing-billy: CACHE KEY for 'http://salefinder.com.au/ajax/locationsearch?callback=jQuery18202362879642751068_1426590113652&query=Melbourne%2C+3000&_=1426590116129' is 'get_salefinder.com.au_2d6206cd9f5712129e1af22dae4add994d5e5494'
-# RuntimeError (puffing-billy: Connection to http://salefinder.com.au/ajax/locationsearch?callback=jQuery18202362879642751068_1426590113652&query=Melbourne%2C+3000&_=1426590116129 not cached and new http connections are disabled):
