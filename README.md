@@ -17,7 +17,7 @@ Noteworthy Technologies:
 * [will_paginate](https://github.com/mislav/will_paginate) for pages pagination
 * [Bootstrap](http://getbootstrap.com/) responsive framework
 
-Future plans for verions 2.0:
+Future plans for version 2.0:
 -----------------------------
 
 * include a search box using elastic search
